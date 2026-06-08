@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChinguLearning — Hub Belajar Bahasa Korea Mandiri</title>
-    <meta name="description" content="Platform belajar mandiri terlengkap dari nol hingga lancar berbicara bahasa Korea. Dilengkapi kurikulum 28 minggu, tata bahasa interaktif, panduan batchim, flashcards, kuis, dan asisten Tutor AI.">
+    <meta name="description" content="Platform belajar mandiri terlengkap dari nol hingga lancar berbicara bahasa Korea. Dilengkapi kurikulum 28 minggu, tata bahasa interaktif, panduan batchim, flashcards, dan kuis evaluatif.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: DM Sans, Plus Jakarta Sans & Noto Sans KR -->
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <!-- Desktop Navigation Links (Home Selalu Muncul) -->
+            <!-- Desktop Navigation Links (Menu AI Dihapus) -->
             <nav class="hidden lg:flex items-center space-x-1">
                 <button onclick="switchTab('dashboard')" class="nav-btn px-3 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-200" id="nav-dashboard">
                     Home
@@ -95,9 +95,6 @@
                 <button onclick="switchTab('quiz')" class="nav-btn px-3 py-2 rounded-lg text-xs font-semibold tracking-wide text-slate-600 hover:text-slate-950 transition-all duration-200" id="nav-quiz">
                     Kuis
                 </button>
-                <button onclick="switchTab('tutor')" class="nav-btn px-3 py-2 rounded-lg text-xs font-semibold tracking-wide text-slate-600 hover:text-slate-950 transition-all duration-200" id="nav-tutor">
-                    Tutor AI
-                </button>
                 <button onclick="switchTab('resources')" class="nav-btn px-3 py-2 rounded-lg text-xs font-semibold tracking-wide text-slate-600 hover:text-slate-950 transition-all duration-200" id="nav-resources">
                     Referensi
                 </button>
@@ -115,7 +112,7 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation Drawer -->
+        <!-- Mobile Navigation Drawer (Menu AI Dihapus) -->
         <div id="mobile-nav" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-1 shadow-inner">
             <button onclick="switchTab('dashboard')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-indigo-600 bg-indigo-50/60 flex items-center space-x-3" id="mob-dashboard">
                 <i class="fa-solid fa-chart-line w-4"></i> <span>Home</span>
@@ -135,9 +132,6 @@
             <button onclick="switchTab('quiz')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50 flex items-center space-x-3" id="mob-quiz">
                 <i class="fa-solid fa-clipboard-question w-4"></i> <span>Kuis Evaluasi</span>
             </button>
-            <button onclick="switchTab('tutor')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50 flex items-center space-x-3" id="mob-tutor">
-                <i class="fa-solid fa-robot w-4"></i> <span>Tanya Tutor AI</span>
-            </button>
             <button onclick="switchTab('resources')" class="w-full text-left px-3 py-2 rounded-lg text-xs font-semibold text-slate-600 hover:bg-slate-50 flex items-center space-x-3" id="mob-resources">
                 <i class="fa-solid fa-compass w-4"></i> <span>Referensi Eksternal</span>
             </button>
@@ -150,14 +144,14 @@
         <!-- ==================== TAB 1: DASHBOARD ==================== -->
         <section id="tab-dashboard" class="space-y-8">
             
-            <!-- HERO DENGAN MASKOT TANPA TOMBOL WIZARD -->
+            <!-- HERO DENGAN MASKOT TEMAN CHINGU -->
             <div class="bg-white border border-slate-200/80 rounded-3xl p-6 sm:p-10 relative overflow-hidden shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
                 <div class="absolute -right-20 -top-20 opacity-[0.02] pointer-events-none transform select-none">
                     <span class="text-[320px] font-bold font-display leading-none">한</span>
                 </div>
                 
                 <div class="relative z-10 max-w-2xl space-y-4 text-center md:text-left">
-                    <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">Belajar Bahasa Korea dengan AI Tutor</span>
+                    <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">Studi Bahasa Korea Mandiri</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight font-display leading-tight">Halo, Chingu! Siap Belajar Hari Ini? 👋</h2>
                     <p class="text-slate-500 text-sm leading-relaxed">Selamat datang di petualangan belajarmu. ChinguLearning membantumu lancar berkomunikasi bahasa Korea, dari pemula mutlak hingga mahir secara terstruktur dan bertahap.</p>
                     <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2.5">
@@ -170,10 +164,10 @@
                     </div>
                 </div>
 
-                <!-- Mascot Container (Emotional Mascot Element) -->
+                <!-- Mascot Container (Emotional Mascot Element - Subtitle Diperbarui) -->
                 <div class="flex-shrink-0 flex flex-col items-center space-y-2 relative z-10">
                     <div id="mascot-avatar-container" class="w-32 h-32 float-animation bg-slate-50 border border-slate-100 rounded-full flex items-center justify-center p-3">
-                        <!-- SVG Mascot Chingu (Excited/Smiling default) -->
+                        <!-- SVG Mascot Chingu -->
                         <svg id="chingu-mascot-svg" class="w-24 h-24 text-slate-800" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <!-- Body -->
                             <ellipse cx="50" cy="55" rx="35" ry="30" fill="#F8FAFC" stroke="#0F172A" stroke-width="3"/>
@@ -191,13 +185,13 @@
                             <path id="mascot-mouth" d="M46 62 Q50 67, 54 62" stroke="#0F172A" stroke-width="3" stroke-linecap="round" fill="none"/>
                         </svg>
                     </div>
-                    <span class="text-[10px] font-bold text-slate-400 bg-white border border-slate-100 px-2 py-0.5 rounded-full shadow-2xs">Guru Chingu AI</span>
+                    <span class="text-[10px] font-bold text-slate-400 bg-white border border-slate-100 px-3 py-0.5 rounded-full shadow-2xs">Teman Belajar Chingu</span>
                 </div>
             </div>
 
-            <!-- SECTION PROGRESS BELAJAR PERMANEN (TANPA WIZARD) -->
+            <!-- SECTION PROGRESS BELAJAR PERMANEN -->
             <div id="dashboard-learning-state-container" class="space-y-6">
-                <!-- Akan dirender dinamis: Tampilan Status Progres Belajar Mingguan langsung aktif -->
+                <!-- Dijadikan dinamis melalui Javascript -->
             </div>
 
             <!-- Panel Ringkasan Statistika Belajar -->
@@ -240,7 +234,7 @@
                 </div>
             </div>
 
-            <!-- SAKSI-METRIK KEBERHASILAN (EMOTIONAL SUCCESS METRICS) -->
+            <!-- SAKSI-METRIK KEBERHASILAN -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div class="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-2xs relative overflow-hidden flex items-center space-x-4">
                     <div class="p-3.5 bg-indigo-50 text-indigo-600 rounded-xl">
@@ -266,37 +260,32 @@
                     </div>
                     <div>
                         <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Konsistensi</p>
-                        <p class="text-xs font-semibold text-slate-500 mt-0.5" id="metric-streak-text">Ayo mulai streak belajarmu!</p>
+                        <p class="text-xs font-semibold text-slate-500 mt-0.5" id="metric-streak-text">Ayo mulai rekor belajarmu!</p>
                     </div>
                 </div>
             </div>
 
-            <!-- WHY CHINGU SEPARATOR (HIGHLIGHTING THE VALUE PROP) -->
+            <!-- PILAR UTAMA CHINGLEALNING (Disesuaikan Menjadi 3 Kolom Sempurna) -->
             <div class="bg-slate-100/50 p-6 sm:p-8 rounded-3xl border border-slate-200/40 space-y-6">
                 <div class="text-center max-w-xl mx-auto space-y-2">
                     <h3 class="text-lg font-bold text-slate-950 font-display">Mengapa Belajar Bersama ChinguLearning?</h3>
-                    <p class="text-slate-500 text-xs">Kami menggabungkan metode akademis terbaik dengan pendekatan emosional yang menyemangati.</p>
+                    <p class="text-slate-500 text-xs">Kami menggabungkan kurikulum pembelajaran mandiri yang terstruktur dengan elemen kuis evaluasi komprehensif.</p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div onclick="switchTab('roadmap')" class="bg-white p-5 rounded-2xl border border-slate-150 shadow-2xs hover:border-indigo-100 cursor-pointer transition-all duration-200">
-                        <i class="fa-solid fa-route text-indigo-500 mb-2"></i>
+                        <i class="fa-solid fa-route text-indigo-500 mb-2 text-lg"></i>
                         <h4 class="text-xs font-bold text-slate-900 block font-display">Roadmap Terstruktur</h4>
                         <p class="text-[10px] text-slate-400 mt-1 leading-relaxed">28 Minggu materi terpadu dari pengenalan Hangul hingga kalimat tingkat menengah.</p>
                     </div>
                     <div onclick="switchTab('flashcards')" class="bg-white p-5 rounded-2xl border border-slate-150 shadow-2xs hover:border-indigo-100 cursor-pointer transition-all duration-200">
-                        <i class="fa-solid fa-layer-group text-emerald-500 mb-2"></i>
+                        <i class="fa-solid fa-layer-group text-emerald-500 mb-2 text-lg"></i>
                         <h4 class="text-xs font-bold text-slate-900 block font-display">Flashcards Kosakata</h4>
                         <p class="text-[10px] text-slate-400 mt-1 leading-relaxed">Metode dek kartu dengan audio pelafalan untuk penguatan memori kosakata jangka panjang.</p>
                     </div>
                     <div onclick="switchTab('quiz')" class="bg-white p-5 rounded-2xl border border-slate-150 shadow-2xs hover:border-indigo-100 cursor-pointer transition-all duration-200">
-                        <i class="fa-solid fa-clipboard-question text-rose-500 mb-2"></i>
+                        <i class="fa-solid fa-clipboard-question text-rose-500 mb-2 text-lg"></i>
                         <h4 class="text-xs font-bold text-slate-900 block font-display">Kuis Evaluatif</h4>
                         <p class="text-[10px] text-slate-400 mt-1 leading-relaxed">Uji pemahaman partikel & tenses secara dinamis, lengkap dengan analisis kesalahan.</p>
-                    </div>
-                    <div onclick="switchTab('tutor')" class="bg-white p-5 rounded-2xl border border-slate-150 shadow-2xs hover:border-indigo-100 cursor-pointer transition-all duration-200">
-                        <i class="fa-solid fa-robot text-purple-500 mb-2"></i>
-                        <h4 class="text-xs font-bold text-slate-900 block font-display">Asisten Chingu AI</h4>
-                        <p class="text-[10px] text-slate-400 mt-1 leading-relaxed">Tanya aturan tata bahasa yang rumit dan dapatkan tanggapan ramah layaknya native speaker.</p>
                     </div>
                 </div>
             </div>
@@ -893,57 +882,6 @@
             </div>
         </section>
 
-        <!-- ==================== TAB 7: TUTOR AI ==================== -->
-        <section id="tab-tutor" class="hidden space-y-6">
-            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 shadow-xs">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between border-b border-slate-100 pb-5 gap-4">
-                    <div class="space-y-1">
-                        <span class="text-xs font-bold text-indigo-600 uppercase tracking-widest">Asisten Chat Pintar</span>
-                        <h2 class="text-xl font-bold text-slate-900 tracking-tight font-display flex items-center space-x-2">
-                            <i class="fa-solid fa-robot text-indigo-600"></i>
-                            <span>Korean AI Tutor (Chingu AI)</span>
-                        </h2>
-                        <p class="text-xs text-slate-500">Tanyakan penjelasan tata bahasa khusus, minta konjugasi kata apa saja, atau minta koreksi karangan tulisan Korea Anda!</p>
-                    </div>
-
-                    <!-- Kunci API Konfigurasi Mandiri -->
-                    <div class="flex flex-wrap items-center gap-2">
-                        <input type="password" id="gemini-key-input" placeholder="Tempel Gemini API Key Anda..." class="text-xs bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 w-48 focus:outline-none focus:ring-1 focus:ring-slate-400">
-                        <button onclick="saveGeminiKey()" class="bg-slate-950 text-white text-xs font-bold px-3 py-2 rounded-xl hover:bg-slate-850 transition-colors">
-                            Simpan Key
-                        </button>
-                        <a href="https://aistudio.google.com/" target="_blank" class="text-[10px] text-indigo-600 hover:underline font-bold" title="Dapatkan Key API Google Gemini Gratis">Dapatkan Key <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <!-- Chat Display Window -->
-                <div class="bg-slate-50 rounded-2xl p-4 h-[400px] overflow-y-auto space-y-4" id="tutor-chat-box">
-                    <div class="flex items-start space-x-3 max-w-xl">
-                        <div class="w-8 h-8 bg-slate-200 text-slate-800 rounded-lg flex items-center justify-center font-bold text-xs shrink-0">AI</div>
-                        <div class="bg-white p-4 rounded-2xl shadow-2xs border border-slate-100 text-xs leading-relaxed text-slate-700">
-                            안녕하세요! Saya adalah <strong>Chingu AI Tutor</strong>. Ada yang bisa saya bantu hari ini dalam mempelajari bahasa Korea?
-                            <br><br>
-                            Anda dapat mengajukan pertanyaan cepat seperti:
-                            <ul class="list-disc list-inside mt-2 space-y-1 font-bold text-indigo-600">
-                                <li><button onclick="setQuickQuestion('Apa beda partikel 은/는 dengan 이/가? Berikan contohnya.')" class="hover:underline text-left">"Apa perbedaan 은/는 dengan 이/가?"</button></li>
-                                <li><button onclick="setQuickQuestion('Bagaimana mengkonjugasikan kata kerja 먹다 ke dalam masa lampau (past)?')" class="hover:underline text-left">"Bagaimana konjugasi lampau kata 먹다?"</button></li>
-                                <li><button onclick="setQuickQuestion('Tuliskan 10 kosa kata sehari-hari penting di lingkungan kantor.')" class="hover:underline text-left">"10 kosakata penting di lingkungan kantor."</button></li>
-                            </ul>
-                            <p class="text-xs text-rose-500 mt-3 font-semibold"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Catatan: Silakan masukkan Gemini API Key di bagian kanan atas untuk menghidupkan fitur asisten AI ini!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Area Ketik Pesan -->
-                <div class="flex items-center space-x-2 pt-2 border-t border-slate-100">
-                    <input type="text" id="tutor-chat-input" onkeydown="handleChatKeydown(event)" placeholder="Ketik pertanyaan atau salin teks Korea Anda ke sini..." class="flex-grow text-xs bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-1 focus:ring-slate-400">
-                    <button onclick="sendChatMessage()" class="bg-slate-950 text-white p-3 rounded-xl hover:bg-slate-850 transition-colors shadow-xs" title="Kirim Pesan">
-                        <i class="fa-solid fa-paper-plane text-xs"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-
         <!-- ==================== TAB 8: SUMBER BELAJAR ==================== -->
         <section id="tab-resources" class="hidden space-y-6">
             <div class="space-y-1 border-b border-slate-200 pb-5">
@@ -1022,7 +960,7 @@
              tasks:[{c:"jade",t:"20 mnt · Anki: hafalkan 15 kata sifat dasar yang berpasangan"},{c:"purple",t:"30 mnt · TTMIK: konjugasi kata sifat bahasa Korea"},{c:"amber",t:"15 mnt · Latihan mendeskripsikan foto pemandangan di sekitar"},{c:"coral",t:"15 mnt · Buat 5 kalimat perbandingan barang atau tempat terdekat"}],
              tip:"Dalam bahasa Korea, kata sifat dikonjugasikan hampir persis seperti kata kerja biasa. Mereka kerap disebut 'kata kerja deskriptif'."},
             {title:"Rencana Masa Depan & Ajakan",milestone:false,vocab:"600 kata",time:"90 mnt/hari",
-             grammar:["-ㄹ/u 거예요 — masa depan / akan melakukan (netral)","-ㄹ/u게요 — masa depan jam / niat (pembicara)","-자 — pola kalimat ajakan kasual (반말)"],
+             grammar:["-ㄹ/u 거예요 — masa depan / akan melakukan (netral)","-ㄹ/u게요 — masa depan janji / niat (pembicara)","-자 — pola kalimat ajakan kasual (반말)"],
              tasks:[{c:"jade",t:"20 mnt · Anki: kosakata rencana dan profesi masa depan"},{c:"purple",t:"30 mnt · TTMIK: perbandingan -ㄹ 거예요 vs -ㄹ게요"},{c:"amber",t:"15 mnt · Dengarkan lagu-lagu bertema janji masa depan"},{c:"coral",t:"20 mnt · Tulis rencana liburan impian Anda ke Korea"}],
              tip:"Dengan menguasai tenses lengkap (lampau, kini, nanti), Anda sekarang siap melakukan percakapan dasar yang bermakna sehari-hari."},
             {title:"Permintaan Sopan & Etika Sosial",milestone:false,vocab:"680 kata",time:"90 mnt/hari",
@@ -1082,7 +1020,7 @@
              tip:"Pada tahap ini, kendala utama Anda bukan lagi aturan tata bahasa, melainkan perbendaharaan kosakata spesifik. Perbanyak membaca bidang favorit!"},
             {title:"★ Milestone · Kepercayaan Diri Berbicara Nyata",milestone:true,vocab:"1.900 kata",time:"110 mnt/hari",
              grammar:["Uji percakapan: Pertahankan obrolan bebas hingga 20 menit penuh","Uji pemahaman: Menonton klip variety show tanpa pusing kata asing","Akurasi hafalan: Pastikan ingatan kosakata aktif dalam Anki"],
-             tasks:[{c:"jade",t:"20 mnt · Bersihkan kartu mati atau yang sudah terlampau hafal dalam Anki"},{c:"purple",t:"20 mnt · Ulasan penuh materi tata bahasa sejauh ini"},{c:"pink",t:"60 mnt · Sesi obrolan marathon tanpa henti bersama penutur asli"},{c:"coral",t:"20 mnt · Tulis esai koreksi tulisan dan minta ulasan dari teman bahasa"}],
+             tasks:[{c:"jade",t:"20 mnt · Bersihkan kartu mati atau yang sudah terlampau hafal dalam Anki"},{c:"purple",t:"20 mnt · Ulasan penuh materi tata bahasa sejauh ini"},{c:"pink",t:"60 mnt · Sesi obrolan marathon tanpa henti bersama penutur asli"},{c:"coral",t:"20 mnt · Buat esai koreksi tulisan dan minta ulasan dari teman bahasa"}],
              tip:"Rasa canggung telah sirna. Kini Anda mampu merangkai ide dengan cepat dan alami tanpa perlu menerjemahkan terlebih dahulu di dalam kepala."},
             {title:"Partikel Penunjuk Nuansa Halus — 도, 만, 밖에",milestone:false,vocab:"2.000 kata",time:"110 mnt/hari",
              grammar:["도 — juga / bahkan (penambahan makna)","만 — hanya (pembatasan netral)","밖에 — hanya (pembatasan bernuansa sedikit/kecewa/kurang)"],
@@ -1151,7 +1089,7 @@
                 id: "unit3",
                 title: "Unit 3: Konjugasi Masa Kini (Present Tense -아요/어요)",
                 level: "Beginner",
-                explanation: "Untuk mengubah kata kerja dasar ke bentuk sopan informal masa kini, hilangkan akhiran '-다' lalu tambahkan -아요 atau -어요 berdasarkan huruf vokal terakhir pada kata dasar.",
+                explanation: "Untuk mengubah kata kerja dasar ke bentuk sopan informal masa kini, hilangkan akhiran '-da' lalu tambahkan -아요 atau -어요 berdasarkan huruf vokal terakhir pada kata dasar.",
                 formula: "Vokal terakhir ㅏ/ㅗ + 아요  |  Vokal lainnya + 어요  |  Kata berakhiran 하다 berubah menjadi 해요",
                 comparison: {
                     title: "Aturan Harmonisasi Vokal",
@@ -1181,13 +1119,13 @@
                     right: "Native-Korea: 한 개 (Satu buah), 두 명 (Dua orang), 세 시 (Jam tiga)."
                 },
                 examples: [
-                    { ko: "저는 스무 살이에요.", rom: "Jeo-neun seu-mu sal-i-e-yo.", id: "Saya berumur 20 tahun." },
+                    { ko: "저neun 스무 살이에요.", rom: "Jeo-neun seu-mu sal-i-e-yo.", id: "Saya berumur 20 tahun." },
                     { ko: "지금은 세 시 십 분이에요.", rom: "Ji-geum-eun se si sip bun-i-e-yo.", id: "Sekarang jam 3 lewat 10 menit." },
                     { ko: "사과 세 개 주세요.", rom: "Sa-gwa se gae ju-se-yo.", id: "Tolong beri saya tiga buah apel." }
                 ],
                 exercise: {
                     prompt: "Lengkapi kalimat: 'Tolong beri saya dua buah kopi' (커피 = kopi, 주세요 = minta/tolong beri, 개 = buah/cangkir)",
-                    template: "커피 두 [blank] 주세요.",
+                    template: "커피 du [blank] 주세요.",
                     answer: "개"
                 }
             },
@@ -1221,7 +1159,7 @@
                 formula: "Lokasi + 에 (keberadaan/ke mana)  |  Lokasi + 에서 (tindakan aktif)",
                 comparison: {
                     title: "에 vs 에서",
-                    left: "에: Bertemu kata kerja pasif/keberadaan (있다/없da) atau pergerakan (가다/오da). Contoh: 学校에 가요 (pergi ke sekolah).",
+                    left: "에: Bertemu kata kerja pasif/keberadaan (있다/없다) atau pergerakan (가다/오다). Contoh: 学校에 가요 (pergi ke sekolah).",
                     right: "에서: Bertemu kata kerja aksi aktif (먹다, 공부하다, 일하다). Contoh: 学校에서 공부해요 (belajar di sekolah)."
                 },
                 examples: [
@@ -1244,7 +1182,7 @@
                 comparison: {
                     title: "Subjek Orang Pertama vs Orang Ketiga",
                     left: "Orang Pertama/Kedua: -고 싶어요. Contoh: (저는) 커피를 마시고 싶어요 (Saya ingin minum kopi).",
-                    right: "Orang Ketiga (Dia/Mereka): -고 싶어해요. Contoh: 친구가 자고 싶어해요 (Teman saya ingin tidur)."
+                    right: "Orang Ketiga (Dia/Mereka): -고 싶어해요. Contoh: ghin-gu가 자고 싶어해요 (Teman saya ingin tidur)."
                 },
                 examples: [
                     { ko: "한국에 가고 싶어요.", rom: "Han-gug-e ga-go sip-eo-yo.", id: "Saya ingin pergi ke Korea." },
@@ -1318,7 +1256,7 @@
                     { ko: "바빠서 못 갔어요.", rom: "Ba-ppa-seo mot gas-seo-yo.", id: "Karena sibuk, saya tidak bisa pergi." }
                 ],
                 exercise: {
-                    prompt: "Lengkapi kalimat alasan: 'Karena bertemu teman, saya senang' (친구를 만나다 = bertemu teman, 기뻐요 = senang)",
+                    prompt: "Lengkapi kalimat alasan: 'Karena bertemu teman, saya senang' (ginn-gu를 만나다 = bertemu teman, 기뻐요 = senang)",
                     template: "친구를 만나[blank] 기뻐요.",
                     answer: "아서"
                 }
@@ -1345,7 +1283,7 @@
 
             { korean: "크다", meaning: "Besar", romaji: "Keu-da", example: "집이 아주 커요. (Rumahnya sangat besar.)", category: "kata_sifat" },
             { korean: "작다", meaning: "Kecil", romaji: "Jak-da", example: "가방이 작아요. (Tasnya kecil.)", category: "kata_sifat" },
-            { korean: "좋다", meaning: "Bagus / Baik", romaji: "Jo-ta", example: "이 생각이 좋아요. (Ide ini bagus.)", category: "kata_sifat" },
+            { korean: "좋ata", meaning: "Bagus / Baik", romaji: "Jo-ta", example: "이 생각이 좋아요. (Ide ini bagus.)", category: "kata_sifat" },
             { korean: "나쁘다", meaning: "Buruk / Jelek", romaji: "Na-ppeu-da", example: "기분이 나빠요. (Suasana hati jelek.)", category: "kata_sifat" },
             { korean: "재미있다", meaning: "Menarik / Menyenangkan", romaji: "Jae-mi-it-da", example: "한국 영화는 재미있어요. (Film Korea menarik.)", category: "kata_sifat" },
             { korean: "맛있다", meaning: "Enak / Lezat", romaji: "Mas-it-da", example: "이 음식은 맛있어요. (Makanan ini enak.)", category: "kata_sifat" },
@@ -1380,7 +1318,7 @@
                 question: "Pilih partikel topik yang tepat untuk membandingkan: 'Kakak perempuan tinggi, sedangkan saya [ ] pendek.' (누나는 키가 커요. 저는 키가 작아요.)",
                 options: ["은", "는", "이", "가"],
                 correct: "는",
-                explanation: "Dalam kalimat perbandingan kontras antara '누나' (kakak perempuan) dan '저' (saya), partikel topik '는' digunakan setelah vokal 'ㅓ' pada '저'."
+                explanation: "Dalam kalimat perbandingan kontras antara '누นา' (kakak perempuan) dan '저' (saya), partikel topik '는' digunakan setelah vokal 'ㅓ' pada '저'."
             },
             {
                 topic: "tenses",
@@ -1588,7 +1526,7 @@
         /* Peralihan Antar Menu (Tabs) */
         function switchTab(tabId) {
             state.currentTab = tabId;
-            const tabs = ['dashboard', 'roadmap', 'lessons', 'batchim', 'flashcards', 'quiz', 'tutor', 'resources'];
+            const tabs = ['dashboard', 'roadmap', 'lessons', 'batchim', 'flashcards', 'quiz', 'resources'];
             
             tabs.forEach(t => {
                 const el = document.getElementById(`tab-${t}`);
@@ -1632,11 +1570,11 @@
             if (mobIcon) mobIcon.className = "fa-solid fa-bars text-xl";
 
             // Efek perubahan ekspresi maskot berdasarkan halaman
-            if (tabId === 'tutor') {
-                renderMascotState('thinking');
-            } else if (tabId === 'quiz') {
+            if (tabId === 'quiz') {
                 renderMascotState('excited');
             } else if (tabId === 'flashcards') {
+                renderMascotState('smiling');
+            } else {
                 renderMascotState('smiling');
             }
 
@@ -2309,8 +2247,8 @@
         }
     </script>
 
+    <!-- LOGIKA KUIS EVALUASI -->
     <script>
-        /* === LOGIKA KUIS EVALUASI === */
         function startQuiz() {
             const selectEl = document.getElementById('quiz-topic-select');
             const topic = selectEl ? selectEl.value : 'all';
@@ -2526,136 +2464,254 @@
         }
     </script>
 
+    <!-- FUNGSI PEMBELAJARAN UMUM & MEDIA REFERENSI -->
     <script>
-        /* === CHINGU AI TUTOR (GEMINI COHESIVE LOGIC) === */
-        const savedKey = localStorage.getItem('chingu_gemini_key_integrated');
-        if (savedKey) {
-            const keyInput = document.getElementById('gemini-key-input');
-            if (keyInput) keyInput.value = savedKey;
-        }
-
-        function saveGeminiKey() {
-            const keyInput = document.getElementById('gemini-key-input');
-            const key = keyInput ? keyInput.value.trim() : '';
-            if (key) {
-                localStorage.setItem('chingu_gemini_key_integrated', key);
-                alert("API Key tersimpan aman di penyimpanan lokal browser Anda!");
-            } else {
-                localStorage.removeItem('chingu_gemini_key_integrated');
-                alert("Kunci API dihapus.");
-            }
-        }
-
-        function setQuickQuestion(text) {
-            const chatInput = document.getElementById('tutor-chat-input');
-            if (chatInput) {
-                chatInput.value = text;
-                sendChatMessage();
-            }
-        }
-
-        function handleChatKeydown(ev) {
-            if (ev.key === 'Enter') sendChatMessage();
-        }
-
-        async function sendChatMessage() {
-            const inputEl = document.getElementById('tutor-chat-input');
-            if (!inputEl) return;
-            const query = inputEl.value.trim();
-            if (!query) return;
-
-            const apiKey = localStorage.getItem('chingu_gemini_key_integrated') || "";
-            appendChatBubble('user', query);
-            inputEl.value = '';
-
-            const loadingId = appendChatBubble('system', '<div class="flex items-center space-x-1"><div class="w-2 h-2 bg-slate-800 rounded-full animate-bounce" style="animation-delay:0ms"></div><div class="w-2 h-2 bg-slate-800 rounded-full animate-bounce" style="animation-delay:150ms"></div><div class="w-2 h-2 bg-slate-800 rounded-full animate-bounce" style="animation-delay:300ms"></div></div>');
-
-            try {
-                const systemPrompt = "Anda adalah Chingu AI, guru bahasa Korea pribadi yang sangat ramah, sabar, dan ahli. Jelaskan tata bahasa, kosa kata, dan pelafalan bahasa Korea dengan bahasa Indonesia yang santun, informatif, dan sangat mudah dipahami oleh pemula. Berikan contoh kalimat dalam bahasa Korea, romanisasi tanda kurung, dan terjemahan bahasa Indonesianya.";
+        /* === RENDER REFERENSI DI DASHBOARD === */
+        function renderDashboardQuickResources() {
+            const container = document.getElementById('dashboard-quick-resources');
+            if (!container) return;
+            container.innerHTML = '';
+            const quickRes = resourcesData.slice(0, 3);
+            
+            quickRes.forEach(r => {
+                const card = document.createElement('a');
+                card.href = r.url;
+                card.target = "_blank";
+                card.rel = "noopener noreferrer";
+                card.className = "p-4 bg-slate-50 border border-slate-150 hover:border-indigo-200 hover:bg-white rounded-xl transition-all duration-200 flex flex-col justify-between";
                 
-                // Menggunakan model gemini-2.5-flash-preview-09-2025 sesuai pedoman
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-                
-                const payload = {
-                    contents: [{ parts: [{ text: query }] }],
-                    systemInstruction: { parts: [{ text: systemPrompt }] }
+                card.innerHTML = `
+                    <div class="space-y-1.5">
+                        <span class="text-[9px] bg-indigo-50 text-indigo-700 font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">${r.type}</span>
+                        <h4 class="text-xs font-bold text-slate-900 block font-display">${r.name}</h4>
+                        <p class="text-[10px] text-slate-400 leading-relaxed">${r.desc.slice(0, 80)}...</p>
+                    </div>
+                    <span class="text-[10px] text-indigo-600 font-bold block mt-3">Kunjungi Rujukan &rarr;</span>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        /* Render Hub-Materi di Dashboard */
+        function renderDashboardLessons() {
+            const container = document.getElementById('dashboard-lessons-list');
+            if (!container) return;
+            container.innerHTML = '';
+
+            lessonsData.forEach((lesson, index) => {
+                const isCompleted = state.completedLessons.includes(lesson.id);
+                const card = document.createElement('div');
+                card.className = "flex items-center justify-between p-3.5 bg-slate-50 border border-slate-200/60 rounded-xl hover:border-indigo-100 transition-colors cursor-pointer";
+                card.onclick = () => {
+                    switchTab('lessons');
+                    selectLesson(lesson.id);
                 };
 
-                // Implementasi Eksponensial Backoff untuk API Call
-                let response;
-                let delay = 1000;
-                for (let i = 0; i < 5; i++) {
-                    try {
-                        response = await fetch(url, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-                        if (response.ok) break;
-                    } catch (e) {
-                        if (i === 4) throw e;
-                    }
-                    await new Promise(r => setTimeout(r, delay));
-                    delay *= 2;
-                }
-
-                if (!response || !response.ok) {
-                    throw new Error("Gagal memanggil API.");
-                }
-
-                const data = await response.json();
-                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                const loadingEl = document.getElementById(loadingId);
-                if (loadingEl) loadingEl.remove();
-
-                if (aiText) {
-                    const formatted = aiText
-                        .replace(/\n/g, '<br>')
-                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-                    appendChatBubble('ai', formatted);
-                } else {
-                    appendChatBubble('ai', "Maaf, Chingu AI tidak menerima format teks yang sesuai. Harap kirimkan ulang pertanyaan.");
-                }
-            } catch (err) {
-                console.error(err);
-                const loadingEl = document.getElementById(loadingId);
-                if (loadingEl) loadingEl.remove();
-                appendChatBubble('ai', `<span class="text-rose-600 font-bold"><i class="fa-solid fa-circle-exclamation mr-1"></i> Terjadi kegagalan komunikasi AI.</span><br><br>Penyebab umum:<br>1. Anda belum mengisi API Key gratis dari Google AI Studio.<br>2. Kunci API Key tidak valid / kuota habis.<br><br>Dapatkan kunci gratis di <a href="https://aistudio.google.com/" target="_blank" class="underline font-bold text-indigo-600">Google AI Studio</a>.`);
-            }
+                card.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <div class="w-7 h-7 rounded-full ${isCompleted ? 'bg-emerald-50 text-emerald-600' : 'bg-indigo-50 text-indigo-700'} flex items-center justify-center font-bold text-xs shrink-0">
+                            ${isCompleted ? '<i class="fa-solid fa-check"></i>' : index + 1}
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-slate-900 font-display">${lesson.title}</h4>
+                            <span class="text-[9px] bg-slate-200/40 text-slate-500 px-2 py-0.5 rounded-full font-bold uppercase">${lesson.level}</span>
+                        </div>
+                    </div>
+                    <span class="text-[10px] ${isCompleted ? 'text-emerald-600 font-bold' : 'text-slate-400 font-semibold'}">
+                        ${isCompleted ? 'Lulus' : 'Belum Selesai'}
+                    </span>
+                `;
+                container.appendChild(card);
+            });
         }
 
-        function appendChatBubble(sender, htmlContent) {
-            const box = document.getElementById('tutor-chat-box');
-            if (!box) return;
-            const bId = "bubble-" + Date.now();
+        /* Menampilkan Detail Materi Terpilih */
+        function selectLesson(lessonId) {
+            const lesson = lessonsData.find(l => l.id === lessonId);
+            if (!lesson) return;
 
-            const wrap = document.createElement('div');
-            wrap.id = bId;
-            wrap.className = `flex items-start space-x-3 max-w-2xl ${sender === 'user' ? 'ml-auto flex-row-reverse space-x-reverse' : ''}`;
+            const selectEl = document.getElementById('grammar-unit-select');
+            if (selectEl) {
+                selectEl.value = lessonId;
+            }
 
-            const avatar = document.createElement('div');
-            avatar.className = `w-8 h-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0 select-none ${sender === 'user' ? 'bg-slate-900 text-white' : 'bg-slate-200 text-slate-850'}`;
-            avatar.innerText = sender === 'user' ? 'Me' : 'AI';
+            const isCompleted = state.completedLessons.includes(lessonId);
+            const detailContainer = document.getElementById('lesson-detail-container');
+            if (!detailContainer) return;
+            
+            detailContainer.innerHTML = `
+                <div class="space-y-6">
+                    <div class="flex items-start justify-between border-b border-slate-100 pb-5 gap-3">
+                        <div class="space-y-1">
+                            <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">${lesson.level}</span>
+                            <h2 class="text-xl font-bold text-slate-900 tracking-tight mt-2 font-display">${lesson.title}</h2>
+                        </div>
+                        <button onclick="toggleLessonCompletion('${lesson.id}')" class="px-3.5 py-2 text-xs font-bold rounded-xl transition-all flex items-center space-x-1.5 ${isCompleted ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-slate-950 text-white hover:bg-slate-850 shadow-xs'}">
+                            <i class="fa-solid ${isCompleted ? 'fa-circle-check' : 'fa-check'}"></i>
+                            <span>${isCompleted ? 'Selesai Belajar' : 'Tandai Selesai'}</span>
+                        </button>
+                    </div>
 
-            const msg = document.createElement('div');
-            msg.className = `p-3.5 rounded-2xl border text-xs leading-relaxed ${sender === 'user' ? 'bg-slate-900 text-white border-slate-950 shadow-2xs' : 'bg-white text-slate-700 border-slate-150 shadow-2xs'}`;
-            msg.innerHTML = htmlContent;
+                    <!-- Materi Teori Pokok -->
+                    <div class="space-y-2.5">
+                        <h3 class="text-xs font-bold text-slate-900 flex items-center space-x-2 font-display">
+                            <i class="fa-solid fa-file-invoice text-indigo-600"></i>
+                            <span>Penjelasan Konseptual</span>
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-150">${lesson.explanation}</p>
+                    </div>
 
-            wrap.appendChild(avatar);
-            wrap.appendChild(msg);
-            box.appendChild(wrap);
+                    <!-- Rumus Kerangka Struktur -->
+                    <div class="space-y-2.5">
+                        <h3 class="text-xs font-bold text-slate-900 flex items-center space-x-2 font-display">
+                            <i class="fa-solid fa-cubes text-indigo-600"></i>
+                            <span>Formula Rumus & Pola Kalimat</span>
+                        </h3>
+                        <div class="bg-slate-950 text-white p-4 rounded-xl font-mono text-xs leading-relaxed">
+                            ${lesson.formula}
+                        </div>
+                    </div>
 
-            box.scrollTo({ top: box.scrollHeight, behavior: 'smooth' });
-            return bId;
+                    <!-- Ringkasan Perbedaan (Conditional) -->
+                    ${lesson.comparison ? `
+                    <div class="bg-indigo-50/20 border border-indigo-100 p-4 rounded-xl space-y-2">
+                        <h4 class="text-[10px] font-bold text-indigo-700 uppercase tracking-wider font-display">${lesson.comparison.title}</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-600">
+                            <div class="p-2.5 bg-white rounded-lg border border-slate-200 shadow-2xs font-medium">${lesson.comparison.left}</div>
+                            <div class="p-2.5 bg-white rounded-lg border border-slate-200 shadow-2xs font-medium">${lesson.comparison.right}</div>
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Contoh Percakapan Interaktif -->
+                    <div class="space-y-3">
+                        <h3 class="text-xs font-bold text-slate-900 flex items-center space-x-2 font-display">
+                            <i class="fa-solid fa-volume-high text-indigo-600"></i>
+                            <span>Contoh Percakapan & Pelafalan Suara</span>
+                        </h3>
+                        
+                        <div class="space-y-2">
+                            ${lesson.examples.map((ex, i) => `
+                                <div class="p-3.5 bg-slate-50 hover:bg-slate-100/50 rounded-xl border border-slate-200/60 flex items-center justify-between gap-4 transition-colors">
+                                    <div class="space-y-1">
+                                        <div class="text-sm font-bold text-slate-900 font-kr select-all">${ex.ko}</div>
+                                        <div class="text-xs text-indigo-600 font-medium">${ex.rom}</div>
+                                        <div class="text-xs text-slate-500">${ex.id}</div>
+                                    </div>
+                                    <button onclick="speakMascotKorean('${ex.ko}', 'excited')" class="w-8 h-8 bg-white border border-slate-200 hover:border-indigo-400 text-indigo-600 rounded-full flex items-center justify-center transition-all shrink-0 shadow-2xs" title="Putar Suara">
+                                        <i class="fa-solid fa-volume-high text-[10px]"></i>
+                                    </button>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Playground Latihan Mini -->
+                    <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl space-y-3">
+                        <h3 class="text-[10px] font-bold text-slate-800 uppercase tracking-widest flex items-center space-x-1.5 font-display">
+                            <i class="fa-solid fa-dumbbell text-indigo-600"></i>
+                            <span>Playground Latihan Mandiri</span>
+                        </h3>
+                        <p class="text-xs text-slate-600 font-medium">${lesson.exercise.prompt}</p>
+                        
+                        <div class="bg-white border border-slate-200 p-3 rounded-lg flex flex-col sm:flex-row items-center gap-3">
+                            <div class="text-xs font-bold text-slate-800">${lesson.exercise.template.replace('[blank]', '_______')}</div>
+                            <div class="flex space-x-2 w-full sm:w-auto ml-auto">
+                                <input type="text" id="playground-input" placeholder="Masukkan jawaban..." class="text-xs border border-slate-200 rounded-lg px-2.5 py-1.5 w-full sm:w-28 focus:outline-none focus:ring-1 focus:ring-slate-400">
+                                <button onclick="checkPlaygroundAnswer('${lesson.id}', '${lesson.exercise.answer}')" class="bg-slate-950 text-white text-[11px] font-semibold px-3 py-1.5 rounded-lg hover:bg-slate-850 transition-colors shrink-0">Periksa</button>
+                            </div>
+                        </div>
+                        <div id="playground-result" class="hidden text-xs font-bold px-3 py-2 rounded-lg"></div>
+                    </div>
+                </div>
+            `;
         }
     </script>
 
+    <!-- LOGIKA ROADMAP, MEDIA & REFERENSI -->
     <script>
-        /* === MEDIA REFERENSI (RESOURCES) SYSTEM === */
-        function ytSvg() { return `<i class="fa-brands fa-youtube text-xl text-rose-600"></i>`; }
-        function webSvg() { return `<i class="fa-solid fa-globe text-xl text-indigo-600"></i>`; }
-        function appSvg() { return `<i class="fa-solid fa-mobile-screen-button text-xl text-emerald-600"></i>`; }
+        function renderWeeks(weeks, phaseNum) {
+            const list = document.getElementById('week-list');
+            if (!list) return;
+            list.innerHTML = '';
+            weeks.forEach((w, i) => {
+                const wn = phaseNum === 1 ? i + 1 : i + 13;
+                const el = document.createElement('div');
+                el.className = 'week-item bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xs hover:shadow-xs transition-all duration-200';
+                if (w.milestone) el.classList.add('border-amber-300');
+
+                // Generate tombol "Pelajari" secara dinamis di bawah kartu minggu jika memiliki relasi materi
+                let learnButtonsHTML = '';
+                if (w.lessonId) {
+                    const lesson = lessonsData.find(l => l.id === w.lessonId);
+                    if (lesson) {
+                        learnButtonsHTML = `
+                            <div class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
+                                <button onclick="goToGrammarUnit('${w.lessonId}')" class="bg-indigo-600 hover:bg-indigo-700 text-white text-[10px] font-bold px-3.5 py-2 rounded-xl flex items-center space-x-1.5 transition-all shadow-2xs transform active:scale-95">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <span>Pelajari ${lesson.title.split(': ')[1]} &rarr;</span>
+                                </button>
+                            </div>
+                        `;
+                    }
+                } else if (w.lessonIds && w.lessonIds.length > 0) {
+                    let buttons = '';
+                    w.lessonIds.forEach(id => {
+                        const lesson = lessonsData.find(l => l.id === id);
+                        if (lesson) {
+                            buttons += `
+                                <button onclick="goToGrammarUnit('${id}')" class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-[10px] font-bold px-3.5 py-2 rounded-xl flex items-center space-x-1.5 transition-all transform active:scale-95">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <span>Pelajari ${lesson.title.split(': ')[1]}</span>
+                                </button>
+                            `;
+                        }
+                    });
+                    learnButtonsHTML = `
+                        <div class="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-2 justify-end">
+                            ${buttons}
+                        </div>
+                    `;
+                }
+
+                el.innerHTML = `
+                    <button class="w-full flex items-center justify-between p-5 text-left bg-white hover:bg-slate-50/80 transition-all duration-200 border-b border-slate-100 hover:shadow-xs group cursor-pointer week-header-btn" onclick="toggleWeek(this)">
+                        <div class="flex items-center space-x-3.5 flex-1 min-w-0">
+                            <span class="text-[10px] font-bold text-slate-400 font-display min-w-[28px] group-hover:text-indigo-600 transition-colors">W${wn}${w.milestone ? ' ★' : ''}</span>
+                            <span class="text-xs sm:text-sm font-bold text-slate-900 truncate group-hover:text-indigo-950 transition-colors font-display">${w.title}</span>
+                        </div>
+                        <div class="flex items-center space-x-3.5 text-xs shrink-0 ml-3">
+                            <span class="text-[10px] bg-slate-100 group-hover:bg-indigo-50 text-slate-500 group-hover:text-indigo-700 font-bold px-2 py-0.5 rounded-full transition-colors">${w.vocab}</span>
+                            <span class="hidden sm:inline-block text-[10px] text-indigo-600 font-bold opacity-0 group-hover:opacity-100 transition-all duration-200 translate-x-1 group-hover:translate-x-0">Lihat Detail</span>
+                            <i class="fa-solid fa-chevron-down text-slate-300 group-hover:text-indigo-500 transition-all duration-300 week-chevron"></i>
+                        </div>
+                    </button>
+                    <div class="week-body hidden border-t border-slate-100 bg-slate-50/30 p-5 space-y-4">
+                        ${w.milestone ? `<div class="text-[11px] font-bold text-amber-800 bg-amber-50 border border-amber-200 rounded-lg px-3 py-1.5 flex items-center space-x-2"><i class="fa-solid fa-circle-exclamation"></i> <span>Momen Pencapaian (Milestone): Evaluasi progres Anda secara penuh.</span></div>` : ''}
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-1.5">
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest block font-display">Materi Tata Bahasa</span>
+                                <div class="space-y-1">
+                                    ${w.grammar.map(g => `<div class="bg-white border border-slate-200 px-3 py-2 rounded-lg text-xs text-slate-600 leading-relaxed font-medium">${g}</div>`).join('')}
+                                </div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest block font-display">Tugas Harian (${w.time})</span>
+                                <div class="space-y-1 text-xs">
+                                    ${w.tasks.map(t => `<div class="flex items-start space-x-2 p-1.5 text-slate-600"><span class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 shrink-0"></span><span>${t.t}</span></div>`).join('')}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50/40 p-3 rounded-lg border border-indigo-100/50 text-xs text-indigo-950 leading-relaxed">
+                            💡 ${w.tip}
+                        </div>
+                        ${learnButtonsHTML}
+                    </div>
+                `;
+                list.appendChild(el);
+            });
+        }
 
         function renderResources(type = 'all') {
             const grid = document.getElementById('resource-grid');
@@ -2681,15 +2737,6 @@
                     </div>
                 </a>
             `).join('');
-        }
-
-        function filterResources(type) {
-            document.querySelectorAll('.res-filter').forEach(btn => {
-                btn.className = "res-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-slate-200 bg-white text-slate-600 hover:text-slate-900";
-            });
-            const filterBtn = document.getElementById('rf-' + type);
-            if (filterBtn) filterBtn.className = "res-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-slate-900 bg-slate-900 text-white shadow-xs";
-            renderResources(type);
         }
     </script>
 </body>
